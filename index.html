@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1132929-HW10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="damage-overlay"></div>
+
+    <div class="manga-bg"></div>
+
+    <div class="bg-decorations"></div>
+
+    <div class="game-wrapper">
+        <header class="comic-header">
+            <div class="main-title">黑白棋大戰</div>
+            <div class="sub-title">OTHELLO WARS • オセロ・ウォーズ</div>
+        </header>
+
+        <div class="main-layout">
+
+            <div class="board-section">
+                <div class="board-frame">
+                    <div id="board" class="board"></div>
+                </div>
+            </div>
+
+            <div class="info-section">
+
+                <div class="turn-banner" id="status-display">
+                    TURN: 黑棋回合
+                </div>
+
+                <div class="battle-panel">
+                    <div class="fighter p1">
+                        <div class="label">先手 (PLAYER 1)</div>
+                        <div class="name-box black-bg">黒棋</div>
+                        <div class="score-display">
+                            <span class="score-label">棋數</span>
+                            <span class="score-val" id="score-black">2</span>
+                        </div>
+                        <div class="win-display">
+                            <span>WINS: </span>
+                            <span id="wins-black">0</span>
+                        </div>
+                    </div>
+
+                    <div class="vs-divider">
+                        <span class="vs-text">VS</span>
+                    </div>
+
+                    <div class="fighter p2">
+                        <div class="label">後手 (P2 / CPU)</div>
+                        <div class="name-box white-bg">白棋</div>
+                        <div class="score-display">
+                            <span class="score-label">棋數</span>
+                            <span class="score-val" id="score-white">2</span>
+                        </div>
+                        <div class="win-display">
+                            <span>WINS: </span>
+                            <span id="wins-white">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="btn-restart" class="manga-btn comic-style-btn">
+                        RESTART<br><span style="font-size: 1.2rem;">重新開始</span>
+                    </button>
+
+                    <div class="settings-box">
+                        <label class="check-box">
+                            <input type="checkbox" id="chk-computer" checked>
+                            <span>人機對戰 (VS CPU)</span>
+                        </label>
+                        <div class="radio-group">
+                            <span>難度:</span>
+                            <label><input type="radio" name="difficulty" value="basic"> 普通</label>
+                            <label><input type="radio" name="difficulty" value="advanced" checked> 困難</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
